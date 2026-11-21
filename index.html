@@ -1,0 +1,395 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Anmol Tiwari Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: dark luxury. Near-black ground, ivory type, a single gold accent, thin hairlines.
+   Left label column names each section, content sits on the right. */
+:root {
+  --bg: #0A0A0B;
+  --surface: #111113;
+  --fg: #EDE8DD;
+  --muted: #A39E92;
+  --line: #2A2722;
+  --gold: #C9A86A;
+  --gold-soft: #1B1710;
+  --on-gold: #0A0A0B;
+  --f-display: "Cormorant Garamond", "Georgia", "Times New Roman", serif;
+  --f-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-block: 0;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1040px; margin: 0 auto; }
+a { color: var(--gold); text-underline-offset: 3px; }
+a:hover { color: var(--fg); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.05; font-weight: 600; }
+p { margin: 0; }
+
+.caps { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; }
+
+/* Top bar */
+.bar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 26px; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
+.bar .mark { font-family: var(--f-display); font-weight: 700; font-size: 1.3rem; letter-spacing: 0.04em; color: var(--gold); }
+.bar nav { display: flex; gap: 6px 24px; flex-wrap: wrap; }
+.bar nav a { color: var(--muted); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.bar nav a:hover { color: var(--gold); }
+
+/* Hero */
+.hero { padding-block: clamp(48px, 10vw, 112px) clamp(44px, 7vw, 80px); border-bottom: 1px solid var(--line); background: radial-gradient(60% 80% at 15% 0%, rgba(201,168,106,0.09), transparent 70%); }
+.eyebrow { color: var(--gold); }
+.hero h1 { font-size: clamp(3.2rem, 11vw, 7.2rem); font-weight: 600; letter-spacing: -0.02em; margin-top: 20px; }
+.rule { width: 72px; height: 1px; background: var(--gold); margin-top: 28px; }
+.hero .lede { font-size: clamp(1.05rem, 2.2vw, 1.25rem); color: var(--muted); max-width: 38rem; margin-top: 24px; line-height: 1.6; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 32px; margin-top: 36px; padding: 0; list-style: none; }
+.facts li { color: var(--fg); }
+.facts li::before { content: "◆"; color: var(--gold); font-size: 0.55rem; margin-right: 12px; vertical-align: 2px; }
+
+/* Sections */
+.sec { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px 48px; padding-block: clamp(44px, 7vw, 80px); border-bottom: 1px solid var(--line); }
+.sec > .label { color: var(--gold); padding-top: 10px; }
+.sec h2 { font-size: clamp(2rem, 4.4vw, 3rem); letter-spacing: -0.01em; }
+.body { min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.body p { max-width: 62ch; color: var(--muted); }
+.body p.strong { color: var(--fg); font-size: 1.08rem; }
+
+/* Project */
+.project { background: var(--surface); border: 1px solid var(--line); padding: clamp(22px, 4vw, 40px); display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.project .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
+.project h3 { font-size: 2.2rem; letter-spacing: -0.01em; }
+.project .tag { color: var(--muted); }
+.feat { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 32px; padding: 0; margin: 0; list-style: none; }
+.feat li { padding-left: 20px; position: relative; font-size: 0.95rem; color: var(--fg); }
+.feat li::before { content: ""; position: absolute; left: 0; top: 0.8em; width: 10px; height: 1px; background: var(--gold); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.chips li { font-size: 0.78rem; letter-spacing: 0.04em; padding: 5px 12px; border: 1px solid var(--line); color: var(--fg); background: transparent; }
+.stackline { display: flex; flex-direction: column; gap: 16px; }
+.stackline .k, .skills h3 { color: var(--muted); font-family: var(--f-body); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
+
+/* Compatibility demo */
+.demo { border: 1px solid var(--line); background: var(--bg); padding: clamp(16px, 3vw, 26px); display: flex; flex-direction: column; gap: 18px; }
+.demo .dh { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.demo .dh strong { font-family: var(--f-display); font-size: 1.4rem; font-weight: 600; }
+.demo .dh span { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+.traits { display: grid; gap: 12px; }
+.trait, .cols { display: grid; grid-template-columns: minmax(0, 120px) minmax(0, 1fr) minmax(0, 1fr) 28px; gap: 10px; align-items: center; }
+.trait .tn { font-size: 0.88rem; color: var(--muted); }
+.seg { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); background: var(--surface); }
+.seg button { font: inherit; font-size: 0.82rem; padding: 8px 6px; border: 0; background: transparent; color: var(--fg); cursor: pointer; min-width: 0; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--gold); color: var(--on-gold); font-weight: 600; }
+.seg button:hover:not([aria-pressed="true"]) { background: var(--gold-soft); }
+.tick { text-align: center; font-size: 1rem; color: var(--muted); }
+.tick.ok { color: var(--gold); font-weight: 600; }
+.cols { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.cols span:nth-child(2), .cols span:nth-child(3) { text-align: center; }
+.score { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.score .num { font-family: var(--f-display); font-size: 3rem; font-weight: 600; min-width: 3.6ch; font-variant-numeric: tabular-nums; color: var(--gold); line-height: 1; }
+.meter { flex: 1 1 160px; height: 2px; background: var(--line); }
+.meter i { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.25s ease; }
+.demo .note { font-size: 0.8rem; color: var(--muted); max-width: none; }
+
+.more { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding-top: 4px; }
+.more p { color: var(--muted); }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 32px; }
+
+/* Education */
+.edu { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.edu article { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 8px 32px; padding-block: 28px; border-bottom: 1px solid var(--line); }
+.edu .when { color: var(--gold); padding-top: 6px; }
+.edu h3 { font-size: 1.7rem; }
+.edu .where { color: var(--fg); margin-top: 6px; font-weight: 500; }
+.edu p { margin-top: 10px; }
+.todo { color: var(--muted); border-bottom: 1px dashed var(--muted); font-weight: 400; }
+
+/* DSA */
+.platforms { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--line); background: var(--surface); }
+.platforms > * { padding: 18px 20px; display: block; text-decoration: none; color: var(--fg); min-width: 0; }
+.platforms > * + * { border-left: 1px solid var(--line); }
+.platforms b { display: block; font-family: var(--f-display); font-size: 1.35rem; font-weight: 600; }
+.platforms span { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.platforms a:hover b { color: var(--gold); }
+.big { font-family: var(--f-display); font-weight: 600; font-size: clamp(3.4rem, 8vw, 5.4rem); line-height: 0.95; color: var(--fg); }
+.big small { font-family: var(--f-body); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-left: 16px; }
+
+/* Contact */
+.links { display: grid; border-top: 1px solid var(--line); max-width: 600px; margin: 0; }
+.links div { display: flex; justify-content: space-between; align-items: center; gap: 8px 16px; padding: 16px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.links dt { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+.links dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; min-width: 0; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.links dd a { color: var(--fg); text-decoration-color: var(--gold); }
+.links dd a:hover { color: var(--gold); }
+.copy { font: inherit; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; background: transparent; color: var(--gold); border: 1px solid var(--line); padding: 4px 10px; cursor: pointer; }
+.copy:hover { border-color: var(--gold); }
+
+footer { padding-block: 32px 44px; color: var(--muted); font-size: 0.8rem; letter-spacing: 0.08em; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 760px) {
+  .sec { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .sec > .label { padding-top: 0; }
+  .feat, .skills { grid-template-columns: minmax(0, 1fr); }
+  .platforms { grid-template-columns: minmax(0, 1fr); }
+  .platforms > * + * { border-left: 0; border-top: 1px solid var(--line); }
+  .trait, .cols { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 24px; }
+  .trait .tn { grid-column: 1 / -1; }
+  .cols span:first-child { display: none; }
+  .edu article { grid-template-columns: minmax(0, 1fr); }
+  .big small { display: block; margin: 10px 0 0; }
+}
+@media (prefers-reduced-motion: reduce) { .meter i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <span class="mark">Anmol Tiwari</span>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#dsa">Problem solving</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow caps">MCA candidate · ABES Engineering College</p>
+    <h1>Anmol Tiwari</h1>
+    <div class="rule"></div>
+    <p class="lede">Full-stack MERN developer with a strong foundation in object-oriented programming and data structures and algorithms.</p>
+    <ul class="facts caps">
+      <li>MERN stack</li>
+      <li>REST APIs</li>
+      <li>400+ DSA problems</li>
+    </ul>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="label caps">About</div>
+    <div class="body">
+      <h2>Summary</h2>
+      <p class="strong">MCA candidate with a strong foundation in Object-Oriented Programming, Data Structures &amp; Algorithms, and hands-on experience in full-stack MERN and REST API development.</p>
+      <p>Proficient in leveraging AI tools to accelerate learning, streamline development workflows, and improve problem-solving efficiency while maintaining strong independent technical understanding.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="projects">
+    <div class="label caps">Projects</div>
+    <div class="body">
+      <article class="project">
+        <div class="head">
+          <h3>NestMate</h3>
+          <span class="tag caps">Roommate-matching platform</span>
+        </div>
+        <p class="strong">NestMate helps people find compatible roommates. It is built for matching people, not for listing rooms or PGs. Members set up a profile and preferences, discover people near them, and talk in real time.</p>
+        <ul class="feat">
+          <li>JWT authentication with bcrypt-hashed passwords</li>
+          <li>Profile and preference management</li>
+          <li>Rule-based compatibility scoring</li>
+          <li>Search and filtering</li>
+          <li>Location-based roommate discovery</li>
+          <li>Bookmarking of profiles</li>
+          <li>Real-time chat with Socket.IO</li>
+        </ul>
+
+        <div class="demo" id="demo">
+          <div class="dh">
+            <strong>How rule-based scoring works</strong>
+            <span>Try it: change either side</span>
+          </div>
+          <div class="cols" aria-hidden="true"><span>Trait</span><span>You</span><span>Candidate</span><span></span></div>
+          <div class="traits" id="traits"></div>
+          <div class="score" aria-live="polite">
+            <span class="num" id="scoreNum">0%</span>
+            <div class="meter" role="presentation"><i id="scoreBar"></i></div>
+          </div>
+          <p class="note">A simplified illustration of the idea with example traits. It does not use NestMate's actual rules or weights.</p>
+        </div>
+
+        <div class="stackline">
+          <div>
+            <div class="k">Frontend</div>
+            <ul class="chips"><li>React.js</li><li>Vite</li><li>Tailwind CSS</li><li>React Router DOM</li><li>Axios</li></ul>
+          </div>
+          <div>
+            <div class="k">Backend</div>
+            <ul class="chips"><li>Node.js</li><li>Express.js</li><li>MongoDB</li><li>Mongoose</li><li>Socket.IO</li></ul>
+          </div>
+        </div>
+      </article>
+
+      <div class="more">
+        <p>More projects are on my GitHub.</p>
+        <a href="https://github.com/AnmolTiwari-124" target="_blank" rel="noopener">View GitHub profile</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="skills">
+    <div class="label caps">Skills</div>
+    <div class="body">
+      <h2>What I work with</h2>
+      <div class="skills">
+        <div>
+          <h3>Frontend</h3>
+          <ul class="chips"><li>React.js</li><li>Vite</li><li>Tailwind CSS</li><li>React Router</li><li>Axios</li><li>CSS</li></ul>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <ul class="chips"><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>MongoDB</li><li>Mongoose</li><li>JWT</li><li>Socket.IO</li></ul>
+        </div>
+        <div>
+          <h3>Languages and databases</h3>
+          <ul class="chips"><li>C++</li><li>JavaScript</li><li>SQL</li></ul>
+        </div>
+        <div>
+          <h3>Computer science</h3>
+          <ul class="chips"><li>Object-oriented programming</li><li>Data structures</li><li>Algorithms</li><li>Graph theory</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="education">
+    <div class="label caps">Education</div>
+    <div class="body">
+      <h2>Education</h2>
+      <div class="edu">
+        <article>
+          <div class="when caps">2025 – 2027<br>Pursuing</div>
+          <div>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p class="where">ABES Engineering College</p>
+            <p>Postgraduate study in computer applications, alongside hands-on full-stack development and regular data structures and algorithms practice.</p>
+          </div>
+        </article>
+        <article>
+          <div class="when caps">2022 – 2025</div>
+          <div>
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p class="where"><span class="todo">add college and university</span></p>
+            <p>Undergraduate foundation in computer applications that led into my MCA.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="dsa">
+    <div class="label caps">Problem solving</div>
+    <div class="body">
+      <p class="big">400+<small>problems solved</small></p>
+      <div class="platforms">
+        <a href="https://leetcode.com/u/anmolt1803/" target="_blank" rel="noopener"><b>LeetCode</b><span>View profile</span></a>
+        <div><b>GeeksforGeeks</b><span>Practice</span></div>
+        <div><b>CodeChef</b><span>Contests</span></div>
+      </div>
+      <p>I focus on the patterns that come up again and again: sliding window, two pointers, Kadane's algorithm, frequency counting and anagram problems. For each one I aim for the optimised solution and a clear explanation of why it works.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="label caps">Contact</div>
+    <div class="body">
+      <h2>Open to software development roles.</h2>
+      <p>If you are hiring for a full-stack or software development position, I would be glad to hear from you.</p>
+      <dl class="links">
+        <div>
+          <dt>Email</dt>
+          <dd><a href="mailto:anmolt1803@gmail.com">anmolt1803@gmail.com</a><button class="copy" id="copyEmail" type="button">Copy</button></dd>
+        </div>
+        <div><dt>GitHub</dt><dd><a href="https://github.com/AnmolTiwari-124" target="_blank" rel="noopener">AnmolTiwari-124</a></dd></div>
+        <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/anmol-tiwari-09774826b/" target="_blank" rel="noopener">Anmol Tiwari</a></dd></div>
+        <div><dt>LeetCode</dt><dd><a href="https://leetcode.com/u/anmolt1803/" target="_blank" rel="noopener">anmolt1803</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <footer>
+    <span>Anmol Tiwari</span>
+    <span>MCA, ABES Engineering College</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var traits = [
+    { name: "Sleep schedule", opts: ["Early riser", "Night owl"] },
+    { name: "Tidiness", opts: ["Very tidy", "Relaxed"] },
+    { name: "Guests", opts: ["Rarely", "Often"] },
+    { name: "Smoking", opts: ["No", "Yes"] }
+  ];
+  var you = [0, 0, 0, 0];
+  var them = [0, 1, 0, 0];
+  var root = document.getElementById("traits");
+  var num = document.getElementById("scoreNum");
+  var bar = document.getElementById("scoreBar");
+
+  function seg(side, i) {
+    var wrap = document.createElement("div");
+    wrap.className = "seg";
+    wrap.setAttribute("role", "group");
+    wrap.setAttribute("aria-label", traits[i].name + " for " + (side === you ? "you" : "candidate"));
+    traits[i].opts.forEach(function (label, v) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = label;
+      b.setAttribute("aria-pressed", side[i] === v ? "true" : "false");
+      b.addEventListener("click", function () { side[i] = v; render(); });
+      wrap.appendChild(b);
+    });
+    return wrap;
+  }
+
+  function render() {
+    root.innerHTML = "";
+    var matches = 0;
+    traits.forEach(function (t, i) {
+      var row = document.createElement("div");
+      row.className = "trait";
+      var n = document.createElement("span");
+      n.className = "tn";
+      n.textContent = t.name;
+      var ok = you[i] === them[i];
+      if (ok) matches++;
+      var tick = document.createElement("span");
+      tick.className = "tick" + (ok ? " ok" : "");
+      tick.textContent = ok ? "✓" : "–";
+      tick.setAttribute("aria-label", ok ? "match" : "no match");
+      row.appendChild(n);
+      row.appendChild(seg(you, i));
+      row.appendChild(seg(them, i));
+      row.appendChild(tick);
+      root.appendChild(row);
+    });
+    var pct = Math.round((matches / traits.length) * 100);
+    num.textContent = pct + "%";
+    bar.style.width = pct + "%";
+  }
+  render();
+
+  var copyBtn = document.getElementById("copyEmail");
+  copyBtn.addEventListener("click", function () {
+    var text = "anmolt1803@gmail.com";
+    function done() { copyBtn.textContent = "Copied"; setTimeout(function () { copyBtn.textContent = "Copy"; }, 1500); }
+    try {
+      navigator.clipboard.writeText(text).then(done, function () { copyBtn.textContent = "Select text"; });
+    } catch (e) { copyBtn.textContent = "Select text"; }
+  });
+})();
+</script>
+
+</body></html>
